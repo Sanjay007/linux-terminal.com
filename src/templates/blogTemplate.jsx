@@ -1,0 +1,214 @@
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { graphql, Link } from 'gatsby';
+import { DiscussionEmbed } from "disqus-react"
+
+import { Navbar, NavDropdown, Nav, Row, Container, Col } from 'react-bootstrap';
+import '../templates/style.css';
+
+import logo from "../images/gatsby-icon.png"
+// Tell Webpack this JS file uses this image
+class BlogTemplate extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  render() {
+  // console.log(this.props);
+
+    const { next, prev, suggestedPost } = this.props.pageContext;
+    const { html, frontmatter, excerpt } = this.props.data.data;
+    const { date, title, tags, category, path, description } = frontmatter
+
+    const uniqueAddresses = Array.from(new Set(suggestedPost.map(a => a.frontmatter.path)))
+      .map(id => {
+        return suggestedPost.find(a => a.frontmatter.path === id)
+      });
+ //console.log(uniqueAddresses, "uniq");
+
+    let disqusConfig = {
+      url: `${'https://frugalisminds.com' + path}`,
+      identifier: frontmatter.path,
+      title: title,
+    }
+    let disqusD = {
+      'shortname': 'frugalisminds',
+      'config': disqusConfig
+    }
+
+    const image = frontmatter.cover != null ? frontmatter.cover.childImageSharp.resize : null;
+    //console.log(this.props, image);
+
+    return <Layout>
+      <SEO title={title} description={frontmatter.metadescription} image={image}></SEO>
+      <Container fluid>
+
+        <div className="mainWrapper" >
+
+
+          <div className="article-content">
+            <header>
+              <h1 className="text-center title-header">{title}</h1>
+              <div className="text-center">
+                {/* <button type="button" className="btn btn-outline-secondary author">Success</button> */}
+                <img alt={'FrugalisMinds'} style={{ width: 50, height: 50 }} src="/frugalis.jpg" className=" rounded-circle" />
+                <p>Author - Tom</p>
+
+                <div className="social-buttons">
+                  <a href="https://facebook.com/frugalisminds" className="facebook"></a>
+                  <a href="https://twitter.com/frugalisminds" className="twitter  "></a>
+                  <a href="https://www.linkedin.com/in/frugalis-minds-599ba91a0/" className="linkedin  "></a>
+                  <a href="http://reddit.com" className="reddit  "></a>
+                </div>
+
+              </div>
+
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
+
+          <aside className="article-aside" style={{ margin:'20px'}}>
+            {/* <div className="widget-area" >
+            <h6  >Related Posts</h6>
+            {uniqueAddresses.map((data,key) => {
+                return (
+                  <div className="media"   style={{alignItems:'center',margin:'6px',padding:'5px'}}>
+                  <a className="pull-left" href={data.frontmatter.path}>
+                    <img style={{marginRight:'5px'}} width={50} height={50} className="media-object" src={data.frontmatter.cover != null ? data.frontmatter.cover.childImageSharp.fixed.src : '/static/gatsby-astronaut-6d91c86c0fde632ba4cd01062fd9ccfa.png'}
+                      alt="Generic placeholder image" />
+                  </a>
+                  <div className="media-body" style={{overflowWrap: 'break-word',
+                  wordBreak: 'break-word',hyphens: 'auto', MozTextSizeAdjust:'auto'}}  >
+                <a href={data.frontmatter.path} style={{fontSize:'0.7rem'}}>{data.frontmatter.title}</a>
+                  </div>
+                </div>
+                );
+              })}
+
+            
+
+
+            </div> */}
+
+            <div className="widget-nomedia-area" style={{}}>
+           
+           
+
+<ul class="list-group">
+  <li class="list-group-item" style={{backgroundColor:"#FFF"}}> <h6  className="text-center">Latest Tutorials</h6></li>
+  <li class="list-group-item"> <a href="">How to implement spring boot with security and auth</a> </li>
+  
+  {this.props.data.latest.edges.map((data,key) => {
+                return (
+                  <li class="list-group-item"> <a href={data.node.frontmatter.path}>{data.node.frontmatter.title}</a> </li>
+
+                  
+                );
+              })}
+              
+</ul>
+
+
+            </div>
+
+            {/* <div className="rightBox corner" >
+              <h3>Related Posts</h3>
+
+              {uniqueAddresses.map((data,key) => {
+                return (
+                  <h5 key={key}>
+                    <a key={key} href={data.frontmatter.path}>
+                      {data.frontmatter.title}
+                    </a>
+                  </h5>
+                );
+              })}
+
+            </div>
+
+            <div className="rightBox emoji-pick">
+              <h3>#latest</h3>
+              {this.props.data.latest.edges.map((data,key) => {
+                return (
+                  <h5>
+                    <a key={key} href={data.node.frontmatter.path}>
+                      {data.node.frontmatter.title}
+                    </a>
+                  </h5>
+                );
+              })}
+            </div> */}
+
+          </aside>
+
+        </div>
+        <DiscussionEmbed {...disqusD} />
+      </Container>
+
+    </Layout>
+
+  }
+}
+
+export default BlogTemplate;
+
+
+export const pageQuery = graphql`
+  query($path: String!) {
+ data: markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date
+        title
+        tags
+        category
+        path
+        metadescription
+        cover {
+          childImageSharp {
+            fluid(
+              maxWidth: 1920
+              quality: 90
+              duotone: { highlight: "#386eee", shadow: "#2323be", opacity: 60 }
+            ) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+            resize(width: 1200, quality: 90) {
+              src
+              width
+              height
+            }
+          }
+        }
+      }
+    },
+    latest:
+    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 12) {
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 75)
+        frontmatter {
+          category
+          path
+          title
+          metadescription
+          cover {
+              childImageSharp {
+                fluid(
+                  maxWidth: 1000
+                  quality: 90
+                  traceSVG: { color: "#2B2B2F" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+        }
+        
+      }
+    }
+    }
+  }`

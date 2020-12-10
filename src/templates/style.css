@@ -150,7 +150,7 @@
 }
 .article-content h2{
     margin-bottom: .75rem;
-    font-size: 2.25rem;
+    font-size: 1.7rem;
     display: flex;
     font-weight: 700;
     font-family: 'Nunito', sans-serif;
@@ -578,7 +578,7 @@ section .section-title {
 }
 
 .gatsby-highlight pre[class*="language-"] {
-    background-color: #110505fc;
+    background-color: #343a40;
     margin: 0;
     padding: 10px;
     overflow: initial;

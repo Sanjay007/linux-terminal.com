@@ -53,8 +53,8 @@ class BlogTemplate extends React.Component {
               <h1 className="text-center title-header">{title}</h1>
               <div className="text-center">
                 {/* <button type="button" className="btn btn-outline-secondary author">Success</button> */}
-                <img alt={'FrugalisMinds'} style={{ width: 50, height: 50 }} src="/frugalis.jpg" className=" rounded-circle" />
-                <p>Author - Tom</p>
+                <img alt={'thelinuxterminal'} style={{ width: 50, height: 50 }} src="/frugalis.jpg" className=" rounded-circle" />
+                <p>Author - Sanjay</p>
 
                 <div className="social-buttons">
                   <a href="https://facebook.com/frugalisminds" className="facebook"></a>

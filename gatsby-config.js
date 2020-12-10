@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `TheLinuxTerminal - Blog Learn and Share Linux tips , tricks tutorials on different flavours`,
     description: `Learn Linux and advanced tips and tricks from system admin and devops users .  `,
-    author: `@frugalisminds`,
+    author: `@ltadmin`,
     keywords: `Learn Linux and advanced tips and tricks from system admin and devops users` ,
-    siteUrl: `https://frugalisminds.com/`,
+    siteUrl: `https://thelinuxterminal.com/`,
     favicon: 'static/icons/favicon.png'
   },
 
@@ -90,7 +90,7 @@ module.exports = {
   resolve: 'gatsby-plugin-manifest',
   options: {
     display: 'standalone',
-    name: 'FrugalisMinds - Learn and Share Spring & Spring Boot',
+    name: 'TheLinuxTerminal - Blog Learn and Share Linux tips , tricks tutorials on different flavours',
     icon: 'static/icons/favicon.png',
   },
 },

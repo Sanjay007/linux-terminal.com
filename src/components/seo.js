@@ -50,7 +50,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
           '@type': 'ImageObject',
           url: image.src,
         },
-        description: description,
+        description: site.siteMetadata.description,
         // datePublished: buildTime,
         // dateModified: buildTime,
         author: {

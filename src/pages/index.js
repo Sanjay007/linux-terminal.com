@@ -11,7 +11,7 @@ import Image from 'react-bootstrap/Image';
 const card = (title, path, data) =>
   <div className="card mb-4 shadow-sm post" style={{ borderRadius: "14px" }} >
     <div className="post-header">
-      <img style={{ borderTopLeftRadius: "13px",objectFit:'fill', borderTopRightRadius: "13px" }}
+      <img alt={title} style={{ borderTopLeftRadius: "13px",objectFit:'fill', borderTopRightRadius: "13px" }}
         src={path} height="180" />
     </div>
 

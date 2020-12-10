@@ -83,7 +83,7 @@ module.exports = {
 {
   resolve: `gatsby-plugin-disqus`,
   options: {
-    shortname: `quicknews360`
+    shortname: `thelinuxterminal`
   }
 },
 {

@@ -30,12 +30,12 @@ console.log(map1);
  //console.log(uniqueAddresses, "uniq");
 
     let disqusConfig = {
-      url: `${'https://frugalisminds.com' + path}`,
+      url: `${'https://thelinuxterminal.com' + path}`,
       identifier: frontmatter.path,
       title: title,
     }
     let disqusD = {
-      'shortname': 'frugalisminds',
+      'shortname': 'thelinuxterminal',
       'config': disqusConfig
     }
 

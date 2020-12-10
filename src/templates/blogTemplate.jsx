@@ -16,12 +16,13 @@ class BlogTemplate extends React.Component {
   }
 
   render() {
-  // console.log(this.props);
 
     const { next, prev, suggestedPost } = this.props.pageContext;
     const { html, frontmatter, excerpt } = this.props.data.data;
     const { date, title, tags, category, path, description } = frontmatter
-
+    console.log(typeof tags);
+    const map1 = tags.map(x => x);
+console.log(map1);
     const uniqueAddresses = Array.from(new Set(suggestedPost.map(a => a.frontmatter.path)))
       .map(id => {
         return suggestedPost.find(a => a.frontmatter.path === id)
@@ -67,6 +68,20 @@ class BlogTemplate extends React.Component {
 
             </header>
             <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div class="col-md-12 text-center">
+
+
+            {map1 !=undefined && map1.map((data,key) => {
+                return (
+                  <a href={`/tags/${data}`} >
+
+                <span class={`blog-tag blog-tag-${data} blog-tag-lg`}>#{data}</span>
+             </a>
+                );
+              })}
+
+           
+        </div>
           </div>
 
           <aside className="article-aside" style={{ margin:'20px'}}>

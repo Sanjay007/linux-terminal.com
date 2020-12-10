@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200&display=swap');
 
+.article-content .blog-tag-lg {
+    font-size: 1.em;
+    border-radius: 4px;
+    color: #FFF;
+    background: rgb(175, 49, 233);
+}
+.article-content .blog-tag-centos {
+    background-color: #21b8df;
+    color: #000;
+}
+.article-content .blog-tag-linux {
+    background-color: #f0db4f;
+    color: #000;
+}
+.article-content .blog-tag {
+    display: inline-block;
+    border-radius: 3px;
+    padding: .2em .5em .3em;
+    border-radius: 2px;
+
+    font-weight: 600;
+    margin: .25em .1em;
+}
+
 .top-head{
     background-color: #6bb756;
     background: linear-gradient(to right, rgba(107,183,86,0.95), rgba(0,143,104,0.95));

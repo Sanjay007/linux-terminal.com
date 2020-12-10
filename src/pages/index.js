@@ -46,9 +46,16 @@ const IndexPage = ({ data }) => {
         <a href="/category/ubuntu" style={{ margin:'1px'}} className="badge badge-warning"> #ubuntu</a>
         <a href="/category/centos7" style={{ margin:'1px'}} className="badge badge-warning"> #centos7</a>
 
-        <div class="social-buttons"><a href="http://facebook.com/frugalisminds" class="facebook "></a><a href="http://twitter.com/frugalisminds" class="twitter  "></a>
-        <a href="https://www.linkedin.com/in/frugalis-minds-599ba91a0/" class="linkedin  "></a>
-        <a href="https://www.instagram.com/sanju00000/" class="reddit  "></a></div>
+        
+
+        <div className="social-buttons">
+                  <a href={`https://www.facebook.com/sharer/sharer.php?u=https://thelinuxterminal.com`} className="facebook"></a>
+                  <a href={`https://twitter.com/share?url=https://thelinuxterminal.com`}  className="twitter  "></a>
+                  <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://thelinuxterminal.com`} className="linkedin  "></a>
+                 
+                  <a href={`https://www.reddit.com/submit?url=https://thelinuxterminal.com`} className="reddit  "></a>
+                </div>
+
 <a className="btn btn-secondary" href="/write-for-us" >Write For Us</a>
         </Container>
 

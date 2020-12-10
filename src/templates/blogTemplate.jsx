@@ -58,10 +58,11 @@ console.log(map1);
                 <p>Author - Sanjay</p>
 
                 <div className="social-buttons">
-                  <a href="https://facebook.com/frugalisminds" className="facebook"></a>
-                  <a href="https://twitter.com/frugalisminds" className="twitter  "></a>
-                  <a href="https://www.linkedin.com/in/frugalis-minds-599ba91a0/" className="linkedin  "></a>
-                  <a href="http://reddit.com" className="reddit  "></a>
+                  <a href={`https://www.facebook.com/sharer/sharer.php?u=https://thelinuxterminal.com${path}`} className="facebook"></a>
+                  <a href={`https://twitter.com/share?url=https://thelinuxterminal.com${path}`}  className="twitter  "></a>
+                  <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://thelinuxterminal.com${path}`} className="linkedin  "></a>
+                 
+                  <a href={`https://www.reddit.com/submit?url=https://thelinuxterminal.com${path}&title=${title}`} className="reddit  "></a>
                 </div>
 
               </div>

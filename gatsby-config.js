@@ -72,7 +72,14 @@ module.exports = {
       },
     },
 `gatsby-plugin-react-helmet`,
-
+{
+  resolve: 'gatsby-plugin-robots-txt',
+  options: {
+    host: 'https://thelinuxterminal.com',
+    sitemap: 'https://thelinuxterminal.com/sitemap.xml',
+    policy: [{ userAgent: '*', allow: '/' }]
+  }
+},
 {
   resolve: 'gatsby-source-filesystem',
   options: {

@@ -210,7 +210,7 @@
      font: "transition: font 0.3s ease";
  }
  .article-content blockquote{
-    background: #073642;
+    background: #c7c9c9;
     position: relative;
     padding-left: .3em;
     border-left: .3rem solid #FAD7A0;

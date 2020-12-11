@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
           <h3>
             Hi , Welcome to <span class="badge badge-success"> TheLinuxTerminal </span> 
           </h3>
-<p style={{color:'rgb(184, 194, 180)'}}>We are <span class="badge badge-success" >Spring Boot</span> Enthusiasts who shares Programming With Spring Boot and java to the Community ❤️  !!</p>
+<p style={{color:'rgb(184, 194, 180)'}}>We are <span class="badge badge-alert" >Linux</span> Enthusiasts who shares Programming With Spring Boot and java to the Community ❤️  !!</p>
         <a href="/category/linux" style={{ margin:'1px'}} className="badge badge-warning">#linux </a>
         <a href="/category/ubuntu" style={{ margin:'1px'}} className="badge badge-warning"> #ubuntu</a>
         <a href="/category/centos7" style={{ margin:'1px'}} className="badge badge-warning"> #centos7</a>

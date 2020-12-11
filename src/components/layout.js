@@ -27,11 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-
-
       <main>{children}</main>
-      
-
 <Container>
       <footer className="pt-4 my-md-5 pt-md-5 border-top">
         <div className="row">
@@ -39,8 +35,8 @@ const Layout = ({ children }) => {
             <img className="mb-2" src="/logo/logo.png" alt="" width="100" height="100"/>
             <small className="d-block mb-3 text-muted">Code Written from Heart & Development tutorials Shared As We Learn </small>
             <small className="d-block mb-3 text-muted">Copyright © 2018-2019</small>
-            <a href="//www.dmca.com/Protection/Status.aspx?ID=47f4a3bf-3b84-48fc-afac-50992ce8ef50" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=47f4a3bf-3b84-48fc-afac-50992ce8ef50"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-         
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=d5ca6bf9-2780-4c29-9c9b-d4ff75dcc974" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_badge_grn_60w.png?ID=d5ca6bf9-2780-4c29-9c9b-d4ff75dcc974"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+    
           </div>
           <div className="col-6 col-md">
             <h5>Categories</h5>

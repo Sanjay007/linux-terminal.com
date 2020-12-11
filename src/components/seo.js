@@ -88,9 +88,9 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
     title={title}
     meta={
       [{name:"dmca-site-verification",
-    content:"RHRyRHNhOU0rT1JNUWE1ekEyTjZuQmd3Z0RqVVNhU0cvSmtUVURSZzBSYz01"},
+    content:"V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01"},
 	{name:"google-site-verification",
-    content:"L8UVkbbswj01oMo7x73Vybqt-cax8XcDBwDg8QVGrms"},
+    content:"ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY"},
         {
           name: "description",
           content: metaDescription

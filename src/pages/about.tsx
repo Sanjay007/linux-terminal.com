@@ -22,19 +22,19 @@ const About = (props: PageProps) => (
         </div>
 
 
-        <p className="text-center">  Eat 🍔 Prey  ❤️ Frugalis . </p>
+        <p className="text-center">  Eat 🍔 Prey  ❤️ Love Linux . </p>
         <p className="text-center"> Dear Readers ,
-        Welcome to Frugalis🧊Minds Blog . 
+        Welcome to theLinuxTerminal . 
         <br></br>
         
-        Frugalis🧊Minds is a blog dedicated for  all Frugalis developers !
+        TheLinuxTerminal is a blog dedicated for  all Frugalis developers !
         Our goal is to try and make things easily understandable by other developers .
         <br></br>
         Our Agenda :- Learn and Share , Why to Wait when you can reach people and share what you have learnt . <div className=""></div>
           
 <h1>Who are We ?</h1>
 We are truely Pasionate developers . We are passionate about developing apps using Frugalis <div className=""></div><div className="">
-Only Stuff we are good at it is Coding 
+Only Stuff we are good at it is Linux and Admin 
 💋
 </div>
 
@@ -46,7 +46,7 @@ During this Journey We have learnt a lot and We came up with an idea to Start a 
 <br></br>
 <h2>How to Reach Us !!</h2> 
 
-Shoot us an email to <a href="mailto:frugalisminds@gmail.com">frugalisminds@gmail.com</a>  Or Don't hesitate to get in touch via Twitter or <a href="https://github.com/Sanjay007">
+Shoot us an email to <a href="mailto:thelinuxt@gmail.com">thelinuxt@gmail.com</a>  Or Don't hesitate to get in touch via Twitter or <a href="https://github.com/Sanjay007">
 Github  </a> or <a href="https://www.linkedin.com/in/sanjay-yadav-54553284/">LinkedIn</a> .
 
 You Can Follow us On <a href="https://www.instagram.com/sanju00000/">Instagram</a> as well.

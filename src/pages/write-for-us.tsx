@@ -45,17 +45,16 @@ export default function Write() {
 
                         <p className="text-center">  Dont Wait Write a Line  💌 !! </p>
                         <h2>We're Looking for Content Collaborators</h2>
-                        <p>👋 Howdy! FrugalisMinds is growing and we’re looking for content collaborators to write  backend development posts .                       You Can Contribute to multiple topics or a single post as well . We prefer content that provides value to our readers.                        If you have faced any issue you can share witht the community as well.
+                        <p>👋 Howdy! Linux Lovers , theLinuxTerminal is growing and we’re looking for content collaborators to write  backend development posts .                       You Can Contribute to multiple topics or a single post as well . We prefer content that provides value to our readers.                        If you have faced any issue you can share witht the community as well.
 </p>
                         <h3>Here are Some of the topics we would like to Cover</h3>
                         <ul>
-                            <li>Spring Core</li>
-                            <li>Spring Boot</li>
-                            <li>Spring Security</li>
-                            <li>Deno JS</li>
-                            <li>Node JS , TypeScript</li>
-                            <li>Spring Cloud and other Spring Projects </li>
-                            <li>Python</li>
+                            <li>System Admi</li>
+                            <li>Linux</li>
+                            <li>Shell Scripting</li>
+                            <li>Debian </li>
+                            <li>RedHat</li>
+                            
                         </ul>
 
 

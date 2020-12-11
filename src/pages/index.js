@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
       <Jumbotron className="text-center" style={{ padding: 0, margin: 0 }}>
 
         <h3>Never Miss any article from our blog</h3>
-        <p>Susbcribe to get regular updates</p>
+        <p>Subscribe to get regular updates</p>
         <Container>
           <Form>
             <Row>

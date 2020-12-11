@@ -25,18 +25,18 @@ A **CentOS/RHEL 7**  production server or a Linux VPS with **mailx** utility ins
 ## Environment Setup
 lets create a file `memoryticker.sh` using `vi` editor 
 ```bash
-vi memeoryticker.sh
+vi memoryticker.sh
 ```
-Now we are going to use this `memeorymailer.sh` to run and send mail alerts for our RAM usage .So the logic that we are going to write in this script is if memeory usage is more than a particular limit let's say in our case **500MB** .
-We are going to send an email alert with list of top 5 processess consuming high memeory in our server . Lets follow the step below 
+Now we are going to use this `memorymailer.sh` to run and send mail alerts for our RAM usage .So the logic that we are going to write in this script is if memory usage is more than a particular limit let's say in our case **500MB** .
+We are going to send an email alert with list of top 5 processess consuming high memory in our server . Lets follow the step below 
 
 ## 1.1 Find Free Memory Of your Linux  Server 
-In order to find free memeory of your linux server execute the following command . 
+In order to find free memory of your linux server execute the following command . 
 
 ```shell
 free -mt
 ```
-This command below shows the total free available and total memeory in your server as shown below .
+This command below shows the total free available and total memory in your server as shown below .
 
 ```text
               total        used        free      shared  buff/cache   available
@@ -44,18 +44,18 @@ Mem:            991         214         543           6         232         634
 Swap:           819           0         819
 Total:         1811         214        1363
 ```
-Now we want to extract the free memeory available here and proceed with our calculation based on that .Here is how we do that 
+Now we want to extract the free memory available here and proceed with our calculation based on that .Here is how we do that 
 ```bash
 free -mt | grep Total | awk '{print $4}'
 ```
-This returns 1363 as output . Now next step is finding out what all processess consuming higher percentage of memeory .
+This returns 1363 as output . Now next step is finding out what all processess consuming higher percentage of memory .
 
 ## 1.2 Find Process Consuming high amount of Memory 
 we will now list down only top 5 processess consuming memory using ```ps``` command.
 ```bash
 ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem  | awk 'NR<=6'
 ```
-We will get output as below which is list of processes consuming memeory and cpu .
+We will get output as below which is list of processes consuming memory and cpu .
 
 ```yaml
   PID  PPID CMD                         %MEM %CPU

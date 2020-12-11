@@ -91,7 +91,7 @@ fi
 exit 0
 
 ```
-We are getting the free memeory then calculationg if free memory is less than **100MB** . If its less than the thrashold we are finding out the top 5 processes consuming the memeory and storing that data in a file . 
+We are getting the free memeory then calculationg if free memory is less than **100MB** . If its less than the threshold we are finding out the top 5 processes consuming the memeory and storing that data in a file . 
 We now use the ```mailx`` to send email to our email .Once you create and use the shell script make sure you make it executable . 
 Once you make the script executable , you should set it as a cron JOB .
 

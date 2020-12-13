@@ -5,7 +5,7 @@ category: "centos"
 path: "/how-to-install-nginx-on-centos7"
 published: true
 tags: [centos7,nginx]
-metadescription: "How To Install Nginx on CentOS 7. Your User need to have privilages for installation on server."
+metadescription: "We will understand How can we send email alert when memory is too low in your linux systems.RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage."
 cover: "images/install-nginx-centos.png"
 author: tom
 ---
@@ -75,37 +75,6 @@ Above command will register nginx as a systemd service and now we can actually c
 sudo systemctl status nginx
 ```
 OutPut :
-![Nginx Status Check Active](images/nginx-status-active.PNG)
+![image info](images/nginx-status-active.png)
 
-If you dont find the status as green , you might be having trouble installing due to permission or one of the Port 80 or 8443 is occupied already . Verify that an d reinstall.
 
-Now , try to acess nginx using your IP you should have seen the default nginx home page . If you are not able to get the default page using your IP then we need to configure firewall .
-
-## Configure FireWalld Allow Nginx Access
-Now we need to configure firewalld in order to enable nginx acess from outside network .
-Execute the following commands
-```bash
-sudo firewall-cmd --zone=public --permanent --add-service=http
-sudo firewall-cmd --zone=public --permanent --add-service=https
-sudo firewall-cmd --reload
-```
-Now once you have provide nginx firewall access , you should be able to access the default home page of nginx using **YOUR_IP**.
-
-```shell
-http://YOUR_IP
-```
-
-![Welcome Page Nginx](images/welcome-page-nginx.png)
-
-> You Will Feel Linux If You Use It Via Console.
-
-## Must Know Nginx Configurations
-1. All Configurations are stored in ```/etc/nginx/``` directory and  default conf file is ```etc/nginx/nginx.conf```
-2. ```nginx -t``` is used to test the configuration changes
-3. In case of any unknown error always try to first check the nginx logs under ```/var/log/nginx``` directory . It has two different log files ```access.log``` and ```error.log``` which has info about nginx errors and general info.
-
-## Conclusion
-Nginx is One of the best reverse proxy and load balancer tool available in the market . But any tool you use has few limitations too . 
-Try using it based on your requirement . 
-
-Happy Coding ... 

@@ -75,6 +75,35 @@ Above command will register nginx as a systemd service and now we can actually c
 sudo systemctl status nginx
 ```
 OutPut :
-![image info](images/nginx-status-active.png)
+![image info](images/nginx-status-active.PNG)
 
+Now that your nginx service is up and running , you should be able access it .Although you won't be able to acess it through an IP . let's check few of the configurations if you want nginx access via IP Address.
 
+## Setup Firewalld for Nginx 
+Why do we need to update firewalld configurations ? One of the reason is that your centos7 server will by default block all incoming web traffic due to security reasons .
+
+**Firewalld** configuration changes to allow **HTTP** and **HTTPS** web traffic should be done as using below commands.
+
+```shell
+sudo firewall-cmd --zone=public --permanent --add-service=http
+sudo firewall-cmd --zone=public --permanent --add-service=https
+sudo firewall-cmd --reload
+```
+Now that you have executed all the above commands successfully , you will be now able to access your Centos7 Nginx home page using your IPAddress.
+
+```shell
+http://YOUR_IP
+```
+you should be able to now see the nginx home page .
+![nginx welcome page](images/welcome-page-nginx.png)
+## Nginx Configurations to Remember
+1. ```/etc/nginx/nginx.conf``` is the main configuration file for nginx.
+2. In case of an error , navigate to nginx log files inside ```/var/log/nginx``` . You will find two log files ```error.log``` and ```access.log``` .
+3. Put all your domains under ```/etc/nginx/conf.d``` create a separate ```domain.conf``` files for all te domain you want to have in your nginx .
+
+## Conclusion
+Congratulations ! We have installed nginx now successfully . 
+You can host multiple sites in nginx and you can also point your node ,springboot servers using server blocks.
+
+Let us know if you face any issuess during instyallation . We will be happy to help you !!
+Happy Coding !!

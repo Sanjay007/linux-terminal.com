@@ -30,7 +30,6 @@ class Tag extends React.Component {
 
 
     render() {
-console.log(this.props)
 const {  posts } = this.props.pageContext;
 
 const uniqueposts = Array.from(new Set(posts.map(a => a.frontmatter.path)))
@@ -38,7 +37,6 @@ const uniqueposts = Array.from(new Set(posts.map(a => a.frontmatter.path)))
       return posts.find(a => a.frontmatter.path === id)
     });
 
-  console.log(uniqueposts, "uniq");
         return <Layout>
 
         

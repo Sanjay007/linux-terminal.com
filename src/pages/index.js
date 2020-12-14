@@ -28,7 +28,7 @@ const card = (title, path, data) =>
 
 
 const IndexPage = ({ data }) => {
- console.log(data);
+ //console.log(data);
   const { edges } = data.latest;
   //console.log(GatsbyDef);
   return (

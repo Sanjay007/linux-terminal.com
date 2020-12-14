@@ -20,17 +20,15 @@ class BlogTemplate extends React.Component {
     const { next, prev, suggestedPost } = this.props.pageContext;
     const { html, frontmatter, excerpt } = this.props.data.data;
     const { date, title, tags, category, path, description } = frontmatter
-    console.log(typeof tags);
     const map1 = tags.map(x => x);
-console.log(map1);
+
     const uniqueAddresses = Array.from(new Set(suggestedPost.map(a => a.frontmatter.path)))
       .map(id => {
         return suggestedPost.find(a => a.frontmatter.path === id)
       });
- //console.log(uniqueAddresses, "uniq");
 
     let disqusConfig = {
-      url: `${'https://thelinuxterminal.com' + path}`,
+      url: `${'https://thelinuxterminal.com'+path}`,
       identifier: frontmatter.path,
       title: title,
     }

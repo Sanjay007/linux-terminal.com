@@ -32,7 +32,7 @@ class NavbarFrugalis extends React.Component {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
      
-      <Nav.Link href="/category/java">Ubuntu</Nav.Link>
+      <Nav.Link href="/category/nginx">Nginx</Nav.Link>
       {/* <NavDropdown title="Spring"  id="collasible-nav-dropdown">
      
         <NavDropdown.Item href="/category/spring">Ubuntu</NavDropdown.Item>
@@ -43,10 +43,10 @@ class NavbarFrugalis extends React.Component {
         <NavDropdown.Divider />
         <NavDropdown.Item href="/category/spring-cloud">Commands</NavDropdown.Item>
       </NavDropdown> */}
-            <Nav.Link href="/category/spring-security">Debian</Nav.Link>
-            <Nav.Link href="/category/spring-security">Scripts</Nav.Link>
+            <Nav.Link href="/category/linux">Linux</Nav.Link>
+            <Nav.Link href="/category/shell-scripting">Scripts</Nav.Link>
 
-      <Nav.Link href="/category/spring-security">CentOs</Nav.Link>
+      <Nav.Link href="/category/centos7">CentOs</Nav.Link>
       
     </Nav>
     <Nav>

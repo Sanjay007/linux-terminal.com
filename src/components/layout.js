@@ -41,19 +41,19 @@ const Layout = ({ children }) => {
           <div className="col-6 col-md">
             <h5>Categories</h5>
             <ul className="list-unstyled text-small">
-              <li><a className="text-muted" href="/category/ubuntu">Ubuntu</a></li>
+            <li><a className="text-muted" href="/category/nginx">Nginx</a></li>
               <li><a className="text-muted" href="/category/linux">Linux</a></li>
-              <li><a className="text-muted" href="/category/centos7">Centos7</a></li>
-              <li><a className="text-muted" href="/category/shell-spring">Shell Scripting</a></li>
+              <li><a className="text-muted" href="/category/centos7">Centos7 </a></li>
+              <li><a className="text-muted" href="/category/shell-scripting">Shell Scripting </a></li>
             </ul>
           </div>
           <div className="col-6 col-md">
             <h5>Categories</h5>
             <ul className="list-unstyled text-small">
-              <li><a className="text-muted" href="/category/ubuntu">Ubuntu</a></li>
+              <li><a className="text-muted" href="/category/nginx">Nginx</a></li>
               <li><a className="text-muted" href="/category/linux">Linux</a></li>
               <li><a className="text-muted" href="/category/centos7">Centos7 </a></li>
-              <li><a className="text-muted" href="/category/shell-script">Shell Scripting </a></li>
+              <li><a className="text-muted" href="/category/shell-scripting">Shell Scripting </a></li>
             </ul>
           </div>
           <div className="col-6 col-md">

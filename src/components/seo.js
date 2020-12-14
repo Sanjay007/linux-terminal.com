@@ -91,6 +91,12 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
     content:"V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01"},
 	{name:"google-site-verification",
     content:"ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY"},
+	{name:"og:locale",content:"en_US"},
+	{name:"og:url",content:site.siteMetadata.siteUrl},
+	{name:"og:site_name",content:"theLinuxTerminal"},
+	  {name:"og:title",content:title},
+	    {name:"og:description",content:metaDescription},
+	
         {
           name: "description",
           content: metaDescription

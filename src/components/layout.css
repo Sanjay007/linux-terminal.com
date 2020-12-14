@@ -33,7 +33,7 @@ footer p {
 }
 
 .card-title{
- 
+  font-family: Nunito,sans-serif;
   font-size: 1em;
   font-weight: 700;
   line-height: 1.2em;
@@ -42,9 +42,10 @@ footer p {
 
 .card-subtitle{
   text-align: left;
- 
+  font-family: Nunito,sans-serif;
+
   font-size: .8em;
-    margin: 20px 0 40px;
+    margin: 15px 0 40px;
     line-height: 1.5em;
 
 }

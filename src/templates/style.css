@@ -54,9 +54,9 @@
 
 .card-body{
     flex: 1 1 auto;
-    min-height: 14rem;
+    min-height: 12rem;
     padding: 1.25rem;
-    max-height: 15rem;
+    max-height: 12rem;
 }
  
 .post-wrapper{

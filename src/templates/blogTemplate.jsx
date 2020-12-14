@@ -113,9 +113,7 @@ console.log(map1);
            
 
 <ul class="list-group">
-  <li class="list-group-item" style={{backgroundColor:"#FFF"}}> <h6  className="text-center">Latest Tutorials</h6></li>
-  <li class="list-group-item"> <a href="">How to implement spring boot with security and auth</a> </li>
-  
+  <li class="list-group-item" style={{backgroundColor:"#FFF"}}> <h6  className="text-center">Latest Tutorials</h6></li> 
   {this.props.data.latest.edges.map((data,key) => {
                 return (
                   <li class="list-group-item"> <a href={data.node.frontmatter.path}>{data.node.frontmatter.title}</a> </li>

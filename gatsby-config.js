@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `TheLinuxTerminal - Blog Learn and Share Linux tips , tricks tutorials on different flavours`,
+    title: `TheLinuxTerminal- Linux/Unix Sysadmin blog help you to learn new Linux/Unix/Ubuntu tips and techniques as well as Linux security`,
     description: `Learn Linux and advanced tips and tricks from system admin and devops users .  `,
     author: `@ltadmin`,
-    keywords: `Learn Linux and advanced tips and tricks from system admin and devops users` ,
+    keywords: `linux,ubuntu,centos7,nginx,shell-scripting` ,
     siteUrl: `https://thelinuxterminal.com/`,
     favicon: 'static/icons/favicon.png'
   },

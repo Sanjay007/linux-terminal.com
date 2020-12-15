@@ -74,9 +74,9 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
       },
     ];
   }
-console.log(site);
+//console.log(site);
   const metaDescription = description;
-  console.log('metad',title,metaDescription);
+  //console.log('metad',title,metaDescription);
   const image =
   metaImage && metaImage.src
     ? `${site.siteMetadata.siteUrl}${metaImage.src}`
@@ -91,7 +91,7 @@ console.log(site);
       type: 'text/javascript', 
       innerHTML: JSON.stringify(schemaOrgJSONLD) 
     }]}
-    
+
     title={title===undefined?site.siteMetadata.title:title}
     meta={
       [{name:"dmca-site-verification",

@@ -20,6 +20,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
             description
             author
             siteUrl
+            keywords
           }
         }
       }
@@ -32,8 +33,8 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
       '@type': 'WebSite',
       '@id': site.siteMetadata.siteUrl,
       url: site.siteMetadata.siteUrl,
-      name: 'FrugalisMinds',
-      alternateName: 'FrugalisMinds' || '',
+      name: 'thelinuxterminal',
+      alternateName: 'thelinuxterminal' || '',
     },
   ];
   if (article) {
@@ -73,8 +74,9 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
       },
     ];
   }
-
+console.log(site);
   const metaDescription = description;
+  console.log('metad',metaDescription);
   const image =
   metaImage && metaImage.src
     ? `${site.siteMetadata.siteUrl}${metaImage.src}`
@@ -85,7 +87,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
       lang: "en"
     }}
   
-    title={title}
+    title={title!=''?title:site.siteMetadata.title}
     meta={
       [{name:"dmca-site-verification",
     content:"V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01"},
@@ -94,12 +96,12 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
 	{name:"og:locale",content:"en_US"},
 	{name:"og:url",content:site.siteMetadata.siteUrl},
 	{name:"og:site_name",content:"theLinuxTerminal"},
-	  {name:"og:title",content:title},
-	    {name:"og:description",content:metaDescription},
+	  {name:"og:title",content:title!=''?title:site.siteMetadata.title},
+	    {name:"og:description",content:metaDescription!=''?metaDescription:site.siteMetadata.description},
 	
         {
           name: "description",
-          content: metaDescription
+          content:metaDescription!=''?metaDescription:site.siteMetadata.description
         },
         {
           name: "keywords",
@@ -107,11 +109,11 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
         },
         {
           property: "og:title",
-          content: title
+          content: title!=''?title:site.siteMetadata.title
         },
         {
           property: "og:description",
-          content: metaDescription
+            content:metaDescription!=''?metaDescription:site.siteMetadata.description
         },
         {
           name: "twitter:creator",
@@ -119,11 +121,11 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
         },
         {
           name: "twitter:title",
-          content: title
+          content: title!=''?title:site.siteMetadata.title
         },
         {
           name: "twitter:description",
-          content: metaDescription
+          content:metaDescription!=''?metaDescription:site.siteMetadata.description
         }
       ]
         .concat(

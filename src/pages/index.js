@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
   //console.log(GatsbyDef);
   return (
     <Layout>
-      <SEO title="TheLinuxTerminal - Linux Tutorials , Tips and Tricks on Ubuntu , RedHat, Centos , Fedora" />
+      <SEO  />
       <Jumbotron className="text-center top-head">
 
         

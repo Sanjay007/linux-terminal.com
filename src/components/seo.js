@@ -76,7 +76,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
   }
 console.log(site);
   const metaDescription = description;
-  console.log('metad',metaDescription);
+  console.log('metad',title,metaDescription);
   const image =
   metaImage && metaImage.src
     ? `${site.siteMetadata.siteUrl}${metaImage.src}`
@@ -86,8 +86,13 @@ console.log(site);
     htmlAttributes={{
       lang: "en"
     }}
-  
-    title={title!=''?title:site.siteMetadata.title}
+
+    script={[{ 
+      type: 'text/javascript', 
+      innerHTML: JSON.stringify(schemaOrgJSONLD) 
+    }]}
+    
+    title={title===undefined?site.siteMetadata.title:title}
     meta={
       [{name:"dmca-site-verification",
     content:"V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01"},
@@ -109,7 +114,7 @@ console.log(site);
         },
         {
           property: "og:title",
-          content: title!=''?title:site.siteMetadata.title
+          content: title===undefined?site.siteMetadata.title:title
         },
         {
           property: "og:description",
@@ -121,7 +126,7 @@ console.log(site);
         },
         {
           name: "twitter:title",
-          content: title!=''?title:site.siteMetadata.title
+          content: title===undefined?site.siteMetadata.title:title
         },
         {
           name: "twitter:description",

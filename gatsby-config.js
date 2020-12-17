@@ -4,14 +4,14 @@ module.exports = {
     title: `Linux Tips Tricks and Tutorials | TheLinuxTerminal`,
     description: `Learn Linux and advanced tips and tricks from system admin and devops users .  `,
     author: `@ltadmin`,
-    keywords: `linux tutorials,linux tips,ubuntu tutorials,centos7,nginx,shell-scripting` ,
+    keywords: `linux tutorials,ubuntu tutorials,centos7,nginx,shell-scripting` ,
     siteUrl: `https://thelinuxterminal.com/`,
     favicon: 'static/icons/favicon.png'
   },
 
   plugins:[
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-feed`,
+    
     `gatsby-remark-embed-gist`,
     'gatsby-transformer-sharp',
    {
@@ -113,6 +113,60 @@ module.exports = {
     defaultQuality: 50,
     failOnError: true,
   }
+},
+{
+  resolve: `gatsby-plugin-feed`,
+  options: {
+    query: `
+      {
+        site {
+          siteMetadata {
+            title
+            description
+            siteUrl
+            site_url: siteUrl
+          }
+        }
+      }
+    `,
+    feeds: [
+      {
+        serialize: ({ query: { site, allMarkdownRemark } }) => {
+          return allMarkdownRemark.edges.map(edge => {
+            return Object.assign({}, edge.node.frontmatter, {
+              description: edge.node.excerpt,
+              date: edge.node.frontmatter.date,
+              url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+              guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+              custom_elements: [{ "content:encoded": edge.node.html }],
+            })
+          })
+        },
+        query: `
+          {
+            allMarkdownRemark(
+              sort: { order: DESC, fields: [frontmatter___date] },
+            ) {
+              edges {
+                node {
+                  excerpt
+                  html
+                 
+                  frontmatter {
+                    title
+                    date
+                    path
+                  }
+                }
+              }
+            }
+          }
+        `,
+        output: "/rss.xml",
+        title: "theLinuxTerminal RSS Feed",
+      },
+    ],
+  },
 }
   ]
 }

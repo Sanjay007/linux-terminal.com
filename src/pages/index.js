@@ -38,9 +38,9 @@ const IndexPage = ({ data }) => {
 
         
         <Container>
-          <h3>
+          <h1>
             Hi , Welcome to <span class="badge badge-success"> TheLinuxTerminal </span> 
-          </h3>
+          </h1>
 <p style={{color:'rgb(184, 194, 180)'}}>We are <span class="badge badge-alert" >Linux</span> Enthusiasts who shares Programming With Linux to the Community ❤️  !!</p>
         <a href="/category/linux" style={{ margin:'1px'}} className="badge badge-warning">#linux </a>
         <a href="/category/ubuntu" style={{ margin:'1px'}} className="badge badge-warning"> #ubuntu</a>

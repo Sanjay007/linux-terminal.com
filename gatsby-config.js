@@ -11,7 +11,7 @@ module.exports = {
 
   plugins:[
     `gatsby-plugin-sitemap`,
-    
+    `gatsby-plugin-feed`,
     `gatsby-remark-embed-gist`,
     'gatsby-transformer-sharp',
    {

@@ -47,9 +47,9 @@ class BlogTemplate extends React.Component {
         <div className="mainWrapper" >
 
 
-          <div className="article-content">
+          <div className="article-content" itemscope="" itemtype="http://schema.org/BlogPosting">
             <header>
-              <h1 className="text-center title-header">{title}</h1>
+              <h1 itemprop="name headline" className="text-center title-header">{title}</h1>
               <div className="text-center">
                 {/* <button type="button" className="btn btn-outline-secondary author">Success</button> */}
                 <img alt={'thelinuxterminal'} style={{ width: 50, height: 50 }} src="/frugalis.jpg" className=" rounded-circle" />
@@ -66,7 +66,7 @@ class BlogTemplate extends React.Component {
               </div>
 
             </header>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div itemprop="articleBody" dangerouslySetInnerHTML={{ __html: html }} />
             <div class="col-md-12 text-center">
 
 

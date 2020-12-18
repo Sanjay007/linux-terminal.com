@@ -103,7 +103,8 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
 	{name:"og:site_name",content:"theLinuxTerminal"},
 	  {name:"og:title",content:title!=''?title:site.siteMetadata.title},
 	    {name:"og:description",content:metaDescription!=''?metaDescription:site.siteMetadata.description},
-	
+  {itemprop:"name",content:title!=''?title:site.siteMetadata.title},
+  {itemprop:"description",content:metaDescription!=''?metaDescription:site.siteMetadata.description},
         {
           name: "description",
           content:metaDescription!=''?metaDescription:site.siteMetadata.description

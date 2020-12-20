@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const About = (props: PageProps) => (
   <Layout>
-    <SEO title="FrugalisMinds" />
+    <SEO title="theLinuxTerminal" />
     <div className="article-wrapper">
 
 <article>
@@ -27,13 +27,13 @@ const About = (props: PageProps) => (
         Welcome to theLinuxTerminal . 
         <br></br>
         
-        TheLinuxTerminal is a blog dedicated for  all Frugalis developers !
+        TheLinuxTerminal is a blog dedicated for  all Linux developers !
         Our goal is to try and make things easily understandable by other developers .
         <br></br>
         Our Agenda :- Learn and Share , Why to Wait when you can reach people and share what you have learnt . <div className=""></div>
           
 <h1>Who are We ?</h1>
-We are truely Pasionate developers . We are passionate about developing apps using Frugalis <div className=""></div><div className="">
+We are truely Passionate linux lovers . <div className=""></div><div className="">
 Only Stuff we are good at it is Linux and Admin 
 💋
 </div>

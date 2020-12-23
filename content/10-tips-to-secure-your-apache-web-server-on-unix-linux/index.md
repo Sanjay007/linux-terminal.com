@@ -15,40 +15,23 @@ If you are one of those Linux admins who works daily on Apache Web server or use
 
 Here are the list of steps you should follow
 ## 1. Disable unnecessary modules
+Once you install apache from source , there are variety of modules that apache has and you might not need all of them . Most of the time System Admins ignore this step .Some of the modules necessary are SSL & SO .
 
-If you are planning to install apache from source, you should disable the following modules. If you do ./configure –help, you’ll see all available modules that you can disable/enable.
+Let's check all the available modules 
+```bash
+./configure –help
+```
+This provides the list of modules , now you can enable and disable based on your requirement as shown below .
 
-* ```userdir``` – Mapping of requests to user-specific directories. i.e ~username in URL will get translated to a directory in the server
-* ```autoindex``` – Displays directory listing when no index.html file is present
-* ```status``` – Displays server stats
-* ```env``` – Clearing/setting of ENV vars
-* ```setenvif``` – Placing ENV vars on headers
-* ```cgi``` – CGI scripts
-* ```actions``` – Action triggering on requests
-* ```negotiation``` – Content negotiation
-* ```alias``` – Mapping of requests to different filesystem parts
-* ```include``` – Server Side Includes
-* ```filter``` – Smart filtering of request
-* ```version``` – Handling version information in config files using IfVersion
-as-is – as-is filetypes
 * Disable all of the above modules as shown below when you do ```./configure```
 ```bash
 ./configure \
 --enable-ssl \
 --enable-so \
---disable-userdir \
 --disable-autoindex \
---disable-status \
+--disable-userdir \
 --disable-env \
---disable-setenvif \
---disable-cgi \
---disable-actions \
---disable-negotiation \
---disable-alias \
---disable-include \
---disable-filter \
---disable-version \
---disable-asis
+--disable-setenvif
 ```
 
 If you enable ssl, and disable mod_setenv, you’ll get the following error.
@@ -56,55 +39,25 @@ If you enable ssl, and disable mod_setenv, you’ll get the following error.
 * Error: Syntax error on line 223 of **/usr/local/apache2/conf/extra/httpd-ssl.conf: Invalid command ‘BrowserMatch’, perhaps misspelled or defined by a module not included in the server configuration**
 * Solution: If you use ssl, don’t disable setenvif. Or, comment out the BrowserMatch in your httpd-ssl.conf, if you disable mod_setenvif.
 
-After the installation, when you do httpd -l or apache2 -l, you’ll see all installed modules.
-```bash
-# /usr/local/apache2/bin/httpd -l
-Compiled in modules:
-  core.c
-  mod_authn_file.c
-  mod_authn_default.c
-  mod_authz_host.c
-  mod_authz_groupfile.c
-  mod_authz_user.c
-  mod_authz_default.c
-  mod_auth_basic.c
-  mod_log_config.c
-  mod_ssl.c
-  prefork.c
-  http_core.c
-  mod_mime.c
-  mod_dir.c
-  mod_so.c
-  ```
-  In this example, we have the following apache modules installed.
-
-* core.c – Apache core module
-* mod_auth* – For various authentication modules
-* mod_log_config.c – Log client request. provides additional log flexibilities.
-* mod_ssl.c – For SSL
-* prefork.c – For MPM (Multi-Processing Module) module
-* httpd_core.c – Apache core module
-* mod_mime.c – For setting document MIME types
-* mod_dir.c – For trailing slash redirect on directory paths. if you specify url/test/, it goes to url/test/index.html
-* mod_so.c – For loading modules during start or restart
-
 ## 2. Run Apache as separate user and group
-By default, apache might run as nobody or daemon. It is good to run apache in its own non-privileged account. For example: apache.
+It is abest practice to run apache as a user For example: apache. in its own user group .We should not leave apache running as a daemon 
 
 Create apache group and user.
 
 ```bash
-groupadd apache
-useradd -d /usr/local/apache2/htdocs -g apache -s /bin/false apache
+groupadd apachegroup
+useradd -d /usr/local/apache2/htdocs -g apachegroup -s /bin/false apache
 ```
 Modify the httpd.conf, and set User and Group appropriately.
 
 ```bash
 # vi httpd.conf
 User apache
-Group apache
+Group apachegroup
 ```
-After this, if you restart apache, and do ps -ef, you’ll see that the apache is running as “apache” (Except the 1st httpd process, which will always run as root).
+After this, if you restart apache, and do ps -ef, you’ll see that the apache is running as “apache” 
+Note :- First apache process httpd will always run as a root
+
 
 ```shell
 # ps -ef | grep -i http | awk '{print $1}'

@@ -35,8 +35,6 @@ This provides the list of modules , now you can enable and disable based on your
 --disable-setenvif
 ```
 
-
-
 ## 2. Run Apache as separate user and group
 It is abest practice to run apache as a user For example: apache. in its own user group .We should not leave apache running as a daemon 
 
@@ -96,25 +94,25 @@ In the above:
 
 bin and conf directory should be viewed only by authorized users. It is good idea to create a group, and add all users who are allowed to view/modify the apache configuration files to this group.
 
-Let us call this group: apacheadmin
+Let us call this group: apacheadmingrp
 
 Create the group.
 ```shell
-groupadd apacheadmin
+groupadd apacheadmingrp
 ```
 Allow access to bin directory for this group.
 
 ```shell
-chown -R root:apacheadmin /usr/local/apache2/bin
+chown -R root:apacheadmingrp /usr/local/apache2/bin
 chmod -R 770 /usr/local/apache2/bin
 ```
 Allow access to conf directory for this group.
 
 ```bash
-chown -R root:apacheadmin /usr/local/apache2/conf
+chown -R root:apacheadmingrp /usr/local/apache2/conf
 chmod -R 770 /usr/local/apache2/conf
 ```
-Add appropriate members to this group. In this example, both ramesh and john are part of apacheadmin
+Add appropriate members to this group. In this example, both ramesh and john are part of apacheadmingrp
 
 ```shell
 # vi /etc/group
@@ -123,11 +121,12 @@ apacheadmin:x:1121:tom,john
 ## 5. Disable Directory Browsing
 If you don’t do this, users will be able to see all the files (and directories) under your root (or any sub-directory).
 
-For example, if they go to http://{your-ip}/images/ and if you don’t have an index.html under images, they’ll see all the image files (and the sub-directories) listed in the browser (just like a ls -1 output). From here, they can click on the individual image file to view it, or click on a sub-directory to see its content.
+For example, if you navigate to http://{your-domain}/image/ and if you don’t have an index.html inside image, you will find all the image files under a particular directory as shown and listed in the browser . 
 
-To disable directory browsing, you can either set the value of Options directive to “None” or “-Indexes”. A – in front of the option name will remove it from the current list of options enforced for that directory.
+ Now an user can click on any of the listed image file to view , then click on a sub-directory to see its content.
 
-Indexes will display a list of available files and sub-directories inside a directory in the browser (only when no index.html is present inside that folder). So, Indexes should not be allowed.
+To disable directory browsing, you can either set the value of Options directive to "None" or "-Indexes:". A – in front of the option name will remove it from the current list of options enforced for that directory.
+
 
 ```html
 

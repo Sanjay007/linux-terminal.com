@@ -116,7 +116,7 @@ Add appropriate members to this group. In this example, both ramesh and john are
 
 ```shell
 # vi /etc/group
-apacheadmin:x:1121:tom,john
+apacheadmingrp:x:1121:tom,john
 ```
 ## 5. Disable Directory Browsing
 If you don’t do this, users will be able to see all the files (and directories) under your root (or any sub-directory).

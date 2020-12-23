@@ -13,7 +13,8 @@ author: tom
 ## Introduction
 If you are one of those Linux admins who works daily on Apache Web server or use it extensively , you should be probably aware of securing your apache web server .
 
-Here are the list of steps you should follow
+Here are the list of steps you should follow 
+
 ## 1. Disable unnecessary modules
 Once you install apache from source , there are variety of modules that apache has and you might not need all of them . Most of the time System Admins ignore this step .Some of the modules necessary are SSL & SO .
 
@@ -34,10 +35,7 @@ This provides the list of modules , now you can enable and disable based on your
 --disable-setenvif
 ```
 
-If you enable ssl, and disable mod_setenv, you’ll get the following error.
 
-* Error: Syntax error on line 223 of **/usr/local/apache2/conf/extra/httpd-ssl.conf: Invalid command ‘BrowserMatch’, perhaps misspelled or defined by a module not included in the server configuration**
-* Solution: If you use ssl, don’t disable setenvif. Or, comment out the BrowserMatch in your httpd-ssl.conf, if you disable mod_setenvif.
 
 ## 2. Run Apache as separate user and group
 It is abest practice to run apache as a user For example: apache. in its own user group .We should not leave apache running as a daemon 
@@ -55,7 +53,12 @@ Modify the httpd.conf, and set User and Group appropriately.
 User apache
 Group apachegroup
 ```
-After this, if you restart apache, and do ps -ef, you’ll see that the apache is running as “apache” 
+Now lets go ahead  restart apache . So execute the following command
+```bash
+$ ps -ef
+```
+User that you will see in the list is "apache" 
+
 Note :- First apache process httpd will always run as a root
 
 
@@ -84,10 +87,13 @@ Secure the root directory by setting the following in the httpd.conf
 In the above:
 
 1. **Options None** – Set this to None, which will not enable any optional extra features.
-2. **Order deny,allow** – This is the order in which the “Deny” and “Allow” directivites should be processed. This processes the “deny” first and “allow” next.
+
+2. **Order deny,allow** – Order of processing the directives are "order" "Deny" and "Allow" directivites .
+
 3. **Deny from all** – This denies request from everybody to the root directory. There is no Allow directive for the root directory. So, nobody can access it.
 
 ## 4. Set appropriate permissions for conf and bin directory
+
 bin and conf directory should be viewed only by authorized users. It is good idea to create a group, and add all users who are allowed to view/modify the apache configuration files to this group.
 
 Let us call this group: apacheadmin
@@ -140,10 +146,13 @@ Indexes will display a list of available files and sub-directories inside a dire
 </Directory>
 ```
 ## 6. Don’t allow .htaccess
+There is a high risk that someone might overwrite the default apache settings in ```.htaccess``` is inside a specific sub directory under htdocs. 
+In terms of security , it is a vulnerabilty that any attacker can use and change the configurations .
 
-Using .htaccess file inside a specific sub-directory under the htdocs (or anywhere ouside), users can overwrite the default apache directives. On certain situations, this is not good, and should be avoided. You should disable this feature.
 
-You should not allow users to use the .htaccess file and override apache directives. To do this, set “AllowOverride None” in the root directory.
+You must not allow users to use the .htaccess file and override apache directives. 
+
+In order to prevent this, set ```“AllowOverride None”``` in the root directory.
 
 ```xml
 <Directory />
@@ -250,10 +259,10 @@ Following are possible ServerTokens values:
 
 1. ServerTokens Prod displays “Server: Apache”
 2. ServerTokens Major displays “Server: Apache/2″
-3. ServerTokens Minor displays “Server: Apache/2.2″
-4. ServerTokens Min displays “Server: Apache/2.2.17″
-5. ServerTokens OS displays “Server: Apache/2.2.17 (Unix)”
-6. ServerTokens Full displays “Server: Apache/2.2.17 (Unix) PHP/5.3.5″ (If you don’t specify any ServerTokens value, this is the default)
+3. ServerTokens Minor displays “Server: Apache/2.4″
+4. ServerTokens Min displays “Server: Apache/2.4″
+5. ServerTokens OS displays “Server: Apache/2.4 (Unix)”
+6. ServerTokens Full displays “Server: Apache/2.4 (Unix) PHP/7.0″ (If you don’t specify any ServerTokens value, this is the default)
 
 ## Conclusion
 

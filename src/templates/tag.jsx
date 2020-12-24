@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from "../images/gatsby-icon.png"
 import Layout from '../components/layout';
+import SEO from '../components/seo';
+
 import { Jumbotron, Container, Col, Row, Button, Form, Card } from 'react-bootstrap'
 import { Link } from "gatsby"
 import GatsbyDef from "../images/gatsby-astronaut.png";
@@ -9,7 +11,7 @@ import GatsbyDef from "../images/gatsby-astronaut.png";
 const card = (title, path, data) =>
   <div class="card mb-4 shadow-sm post" style={{ borderRadius: "14px" }} >
    <div class="post-header">
-   <img style={{ borderTopLeftRadius: "13px",objectFit:'fill',borderTopRightRadius: "13px" }}
+   <img alt={title} style={{ borderTopLeftRadius: "13px",objectFit:'fill',borderTopRightRadius: "13px" }}
       src={path}  height="150" />
    </div>
    
@@ -30,7 +32,7 @@ class Tag extends React.Component {
 
 
     render() {
-const {  posts } = this.props.pageContext;
+const {  posts,tagName } = this.props.pageContext;
 
 const uniqueposts = Array.from(new Set(posts.map(a => a.frontmatter.path)))
     .map(id => {
@@ -38,11 +40,13 @@ const uniqueposts = Array.from(new Set(posts.map(a => a.frontmatter.path)))
     });
 
         return <Layout>
-
+<SEO title={`Learn ${tagName}` } />
         
 
         <div class="album py-5 bg-light text-center ">
+        <h1># learn {tagName}</h1>
         <Container >
+         
         <Row>
             {uniqueposts.map((data) => {
               return (

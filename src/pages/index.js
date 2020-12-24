@@ -26,10 +26,33 @@ const card = (title, path, data) =>
     <Link to={`${data.node.frontmatter.path}`} ></Link>
   </div>;
 
+const filterEdges=(data)=>{
+let edges=[];
+const excludePost=['/privacy-policy/']
+
+data.forEach(function (value) {
+
+ if(excludePost.includes(value.node.frontmatter.path)){
+  console.log(value.node.frontmatter.path)
+ }else{
+  edges.push(value);
+ }
+});
+
+return edges;
+
+}
 
 const IndexPage = ({ data }) => {
  //console.log(data);
   const { edges } = data.latest;
+const filtered=filterEdges(edges);
+console.log(edges.length)
+
+console.log(filtered.length);
+
+
+
   //console.log(GatsbyDef);
   return (
     <Layout>
@@ -43,7 +66,7 @@ const IndexPage = ({ data }) => {
           </h1>
 <p style={{color:'rgb(184, 194, 180)'}}>We are <span class="badge badge-alert" >Linux</span> Enthusiasts who shares Programming With Linux to the Community ❤️  !!</p>
         <a href="/category/linux" style={{ margin:'1px'}} className="badge badge-warning">#linux </a>
-        <a href="/category/ubuntu" style={{ margin:'1px'}} className="badge badge-warning"> #ubuntu</a>
+        <a href="/category/nginx" style={{ margin:'1px'}} className="badge badge-warning"> #nginx</a>
         <a href="/category/centos7" style={{ margin:'1px'}} className="badge badge-warning"> #centos7</a>
 
         
@@ -66,7 +89,7 @@ const IndexPage = ({ data }) => {
         <Container >
         
           <Row>
-            {edges.map((data,key) => {
+            {filtered.map((data,key) => {
               return (
                 <Col key={key} md={4} >
                   {card(data.node.frontmatter.title, data.node.frontmatter.cover != null ? data.node.frontmatter.cover.childImageSharp.fluid.src : GatsbyDef, data)}

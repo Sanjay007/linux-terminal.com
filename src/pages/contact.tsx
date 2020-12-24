@@ -33,8 +33,8 @@ export default function Contact() {
 
     return (
         <Layout>
-            <SEO title="Write For Us " />
-
+           
+           <SEO title="Contct Us " />
 
             <div className="article-wrapper">
             <article>

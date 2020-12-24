@@ -72,7 +72,7 @@ class BlogTemplate extends React.Component {
 
             {map1 !=undefined && map1.map((data,key) => {
                 return (
-                  <a href={`/tags/${data}`} >
+                  <a href={`/category/${data}`} >
 
                 <span class={`blog-tag blog-tag-${data} blog-tag-lg`}>#{data}</span>
              </a>

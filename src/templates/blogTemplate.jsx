@@ -49,7 +49,7 @@ class BlogTemplate extends React.Component {
 
           <div className="article-content" itemscope="" itemtype="http://schema.org/BlogPosting">
             <header>
-              <h1 itemprop="name headline" className="text-center title-header">{title}</h1>
+              <h1 itemprop="headline" className="text-center title-header">{title}</h1>
               <div className="text-center">
                 {/* <button type="button" className="btn btn-outline-secondary author">Success</button> */}
                 <img alt={'thelinuxterminal'} style={{ width: 50, height: 50 }} src="/frugalis.jpg" className=" rounded-circle" />

@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang,  meta, image: metaImage, title ,article,author,publishedOn}) {
+function SEO({ description, lang,  meta, image: metaImage, title ,article:article,author,publishedOn}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -37,7 +37,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
       alternateName: 'thelinuxterminal' || '',
     },
   ];
-  if (article) {
+  if (article===true) {
     schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
@@ -84,16 +84,17 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
   metaImage && metaImage.src
     ? `${site.siteMetadata.siteUrl}${metaImage.src}`
     : null;
+    console.log(article);
+
   return (
-    <Helmet
+    <Helmet>
+ <Helmet
     htmlAttributes={{
       lang: "en"
     }}
 
 
-    script={[
-      {"src": JSON.stringify(schemaOrgJSONLD), "type": "text/javascript"}
-]}
+    
     title={title===undefined?site.siteMetadata.title:title}
     meta={
       [{name:"dmca-site-verification",
@@ -166,6 +167,12 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
         .concat(meta)
     }
   />
+<script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script>
+    </Helmet>
+   
+  
   )
 }
 

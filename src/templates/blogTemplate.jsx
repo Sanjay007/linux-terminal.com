@@ -178,6 +178,7 @@ export const pageQuery = graphql`
         tags
         category
         path
+        article
         metadescription
         cover {
           childImageSharp {

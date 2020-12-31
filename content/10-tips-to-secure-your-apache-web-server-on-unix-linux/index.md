@@ -8,6 +8,7 @@ tags: [shell-scripting,centos7,linux]
 metadescription: "In this tutorial, I'll cover some main tips to secure your Apache web server which can help you to configure Apache web server on linu/unix"
 cover: "images/tips-secure-apache-server-linux.png"
 author: tom
+article: true
 ---
 
 ## Introduction

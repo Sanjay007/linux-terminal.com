@@ -56,7 +56,7 @@ console.log(filtered.length);
   //console.log(GatsbyDef);
   return (
     <Layout>
-      <SEO  />
+      <SEO title={'Linux Tips , tricks Tutorials '} article={false} />
       <Jumbotron className="text-center top-head">
 
         

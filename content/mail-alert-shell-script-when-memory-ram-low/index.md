@@ -8,6 +8,7 @@ tags: [shell-scripting,centos7,linux]
 metadescription: "We will understand How can we send email alert when memory is too low in your linux systems.RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage."
 cover: "images/mail-alert.png"
 author: tom
+article: true
 ---
 
 ## Introduction

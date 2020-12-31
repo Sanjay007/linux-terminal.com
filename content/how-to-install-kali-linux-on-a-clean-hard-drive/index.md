@@ -1,13 +1,14 @@
 ---
 title: "How to install Kali Linux on a clean hard drive"
 date: "2020-12-19"
-category: "linux"
+category: "kali-linux"
 path: "/how-to-install-kali-linux-on-a-clean-hard-drive/"
 published: true
-tags: [centos7,nginx]
+tags: [kali-linux]
 metadescription: "Installing Kali Linux on your computer is an easy process. First, you’ll need compatible computer hardware."
 cover: "images/install-kali-linux-clean-hard-drive.png"
 author: tom
+article: true
 ---
 
 ## Introduction

@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang,  meta, image: metaImage, title ,article,author}) {
+function SEO({ description, lang,  meta, image: metaImage, title ,article,author,publishedOn}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -49,16 +49,18 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
         headline: title,
         image: {
           '@type': 'ImageObject',
-          url: image.src,
+          url: metaImage.src,
         },
         description: site.siteMetadata.description,
-        // datePublished: buildTime,
+        datePublished: publishedOn,
         // dateModified: buildTime,
         author: {
           '@type': 'Person',
           name: author,
         },
         publisher: {
+        
+        "@id": "https://frugalisminds.com/#organization",
           '@type': 'Organization',
           name: author,
           logo: {
@@ -67,6 +69,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
           },
         },
         isPartOf: site.siteMetadata.siteUrl,
+        "inLanguage": "en-US",
         mainEntityOfPage: {
           '@type': 'WebSite',
           '@id': site.siteMetadata.siteUrl,
@@ -87,11 +90,10 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article,author
       lang: "en"
     }}
 
-    script={[{ 
-      type: 'text/javascript', 
-      innerHTML: JSON.stringify(schemaOrgJSONLD) 
-    }]}
 
+    script={[
+      {"src": JSON.stringify(schemaOrgJSONLD), "type": "text/javascript"}
+]}
     title={title===undefined?site.siteMetadata.title:title}
     meta={
       [{name:"dmca-site-verification",

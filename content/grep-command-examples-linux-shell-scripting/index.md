@@ -8,6 +8,7 @@ tags: [linux,shell-scripting]
 metadescription: "Grep commands are widely used in text based operations linux shell scripting .Lets learn Grep Command Exmples in Unix/Linux Shell Scripting"
 cover: "images/grep-command-example.png"
 author: tom
+article: true
 ---
 
 ## Introduction

@@ -8,6 +8,7 @@ tags: [centos7,nginx]
 metadescription: "We will understand How can we send email alert when memory is too low in your linux systems.RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage."
 cover: "images/install-nginx-centos.png"
 author: tom
+article: true
 ---
 
 ## Introduction
@@ -75,7 +76,7 @@ Above command will register nginx as a systemd service and now we can actually c
 sudo systemctl status nginx
 ```
 OutPut :
-![image info](images/nginx-status-active.PNG)
+![nginx status active](images/nginx-status-active.PNG)
 
 Now that your nginx service is up and running , you should be able access it .Although you won't be able to acess it through an IP . let's check few of the configurations if you want nginx access via IP Address.
 

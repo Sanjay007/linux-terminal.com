@@ -34,7 +34,7 @@ export default function Contact() {
     return (
         <Layout>
            
-           <SEO title="Contct Us " />
+           <SEO title="Contact Us " />
 
             <div className="article-wrapper">
             <article>

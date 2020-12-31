@@ -28,7 +28,7 @@ class BlogTemplate extends React.Component {
       });
 
     let disqusConfig = {
-      url: `${'https://thelinuxterminal.com'+path}`,
+      url: `${'https://thelinuxterminal.com' + path}`,
       identifier: frontmatter.path,
       title: title,
     }
@@ -41,8 +41,8 @@ class BlogTemplate extends React.Component {
     //console.log(this.props, image);
 
     return <Layout>
-      <SEO title={title} publishedOn={frontmatter.data}  description={frontmatter.metadescription} image={image} article={frontmatter.article}></SEO>
-     
+      <SEO title={title} publishedOn={frontmatter.data} description={frontmatter.metadescription} image={image} article={frontmatter.article}></SEO>
+
       <Container fluid>
 
         <div className="mainWrapper" >
@@ -58,9 +58,9 @@ class BlogTemplate extends React.Component {
 
                 <div className="social-buttons">
                   <a href={`https://www.facebook.com/sharer/sharer.php?u=https://thelinuxterminal.com${path}`} className="facebook"></a>
-                  <a href={`https://twitter.com/share?url=https://thelinuxterminal.com${path}`}  className="twitter  "></a>
+                  <a href={`https://twitter.com/share?url=https://thelinuxterminal.com${path}`} className="twitter  "></a>
                   <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://thelinuxterminal.com${path}`} className="linkedin  "></a>
-                 
+
                   <a href={`https://www.reddit.com/submit?url=https://thelinuxterminal.com${path}&title=${title}`} className="reddit  "></a>
                 </div>
 
@@ -71,89 +71,40 @@ class BlogTemplate extends React.Component {
             <div class="col-md-12 text-center">
 
 
-            {map1 !=undefined && map1.map((data,key) => {
+              {map1 != undefined && map1.map((data, key) => {
                 return (
                   <a href={`/category/${data}`} >
 
-                <span class={`blog-tag blog-tag-${data} blog-tag-lg`}>#{data}</span>
-             </a>
+                    <span class={`blog-tag blog-tag-${data} blog-tag-lg`}>#{data}</span>
+                  </a>
                 );
               })}
 
-           
-        </div>
+
+            </div>
           </div>
 
-          <aside className="article-aside" style={{ margin:'20px'}}>
-            {/* <div className="widget-area" >
-            <h6  >Related Posts</h6>
-            {uniqueAddresses.map((data,key) => {
-                return (
-                  <div className="media"   style={{alignItems:'center',margin:'6px',padding:'5px'}}>
-                  <a className="pull-left" href={data.frontmatter.path}>
-                    <img style={{marginRight:'5px'}} width={50} height={50} className="media-object" src={data.frontmatter.cover != null ? data.frontmatter.cover.childImageSharp.fixed.src : '/static/gatsby-astronaut-6d91c86c0fde632ba4cd01062fd9ccfa.png'}
-                      alt="Generic placeholder image" />
-                  </a>
-                  <div className="media-body" style={{overflowWrap: 'break-word',
-                  wordBreak: 'break-word',hyphens: 'auto', MozTextSizeAdjust:'auto'}}  >
-                <a href={data.frontmatter.path} style={{fontSize:'0.7rem'}}>{data.frontmatter.title}</a>
-                  </div>
-                </div>
-                );
-              })}
+          <aside className="article-aside" style={{ margin: '20px' }}>
 
-            
-
-
-            </div> */}
 
             <div className="widget-nomedia-area" style={{}}>
-           
-           
-
-<ul class="list-group">
-  <li class="list-group-item" style={{backgroundColor:"#FFF"}}> <h6  className="text-center">Latest Tutorials</h6></li> 
-  {this.props.data.latest.edges.map((data,key) => {
-                return (
-                  <li class="list-group-item"> <a href={data.node.frontmatter.path}>{data.node.frontmatter.title}</a> </li>
-
-                  
-                );
-              })}
-              
-</ul>
 
 
-            </div>
 
-            {/* <div className="rightBox corner" >
-              <h3>Related Posts</h3>
+              <ul class="list-group">
+                <li class="list-group-item" style={{ backgroundColor: "#FFF" }}> <h6 className="text-center">Latest Tutorials</h6></li>
+                {this.props.data.latest.edges.map((data, key) => {
+                  return (
+                    <li class="list-group-item"> <a href={data.node.frontmatter.path}>{data.node.frontmatter.title}</a> </li>
 
-              {uniqueAddresses.map((data,key) => {
-                return (
-                  <h5 key={key}>
-                    <a key={key} href={data.frontmatter.path}>
-                      {data.frontmatter.title}
-                    </a>
-                  </h5>
-                );
-              })}
+
+                  );
+                })}
+
+              </ul>
+
 
             </div>
-
-            <div className="rightBox emoji-pick">
-              <h3>#latest</h3>
-              {this.props.data.latest.edges.map((data,key) => {
-                return (
-                  <h5>
-                    <a key={key} href={data.node.frontmatter.path}>
-                      {data.node.frontmatter.title}
-                    </a>
-                  </h5>
-                );
-              })}
-            </div> */}
-
           </aside>
 
         </div>

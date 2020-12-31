@@ -34,7 +34,14 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
       '@id': site.siteMetadata.siteUrl,
       url: site.siteMetadata.siteUrl,
       name: 'thelinuxterminal',
+      "inLanguage": "en-US",
       alternateName: 'thelinuxterminal' || '',
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://thelinuxterminal.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+
     },
   ];
   if (article===true) {
@@ -51,7 +58,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
           '@type': 'ImageObject',
           url: metaImage.src,
         },
-        description: site.siteMetadata.description,
+        description: description,
         datePublished: publishedOn,
         // dateModified: buildTime,
         author: {
@@ -68,7 +75,9 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
             url: site.siteMetadata.siteUrl,
           },
         },
-        isPartOf: site.siteMetadata.siteUrl,
+        isPartOf: {
+          "@id":"https://frugalisminds.com/#website"
+        },
         "inLanguage": "en-US",
         mainEntityOfPage: {
           '@type': 'WebSite',
@@ -84,7 +93,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
   metaImage && metaImage.src
     ? `${site.siteMetadata.siteUrl}${metaImage.src}`
     : null;
-    console.log(article);
+   
 
   return (
     <Helmet>

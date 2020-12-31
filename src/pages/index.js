@@ -11,7 +11,7 @@ import Image from 'react-bootstrap/Image';
 const card = (title, path, data) =>
   <div className="card mb-4 shadow-sm post" style={{ borderRadius: "14px" }} >
     <div className="post-header">
-      <img alt={title} style={{ borderTopLeftRadius: "13px",objectFit:'fill', borderTopRightRadius: "13px" }}
+      <img alt={title} style={{ borderTopLeftRadius: "13px", objectFit: 'fill', borderTopRightRadius: "13px" }}
         src={path} height="180" />
     </div>
 
@@ -26,70 +26,63 @@ const card = (title, path, data) =>
     <Link to={`${data.node.frontmatter.path}`} ></Link>
   </div>;
 
-const filterEdges=(data)=>{
-let edges=[];
-const excludePost=['/privacy-policy/']
+const filterEdges = (data) => {
+  let edges = [];
+  const excludePost = ['/privacy-policy/']
 
-data.forEach(function (value) {
+  data.forEach(function (value) {
 
- if(excludePost.includes(value.node.frontmatter.path)){
-  console.log(value.node.frontmatter.path)
- }else{
-  edges.push(value);
- }
-});
+    if (excludePost.includes(value.node.frontmatter.path)) {
 
-return edges;
+    } else {
+      edges.push(value);
+    }
+  });
+
+  return edges;
 
 }
 
 const IndexPage = ({ data }) => {
- //console.log(data);
   const { edges } = data.latest;
-const filtered=filterEdges(edges);
-console.log(edges.length)
+  const filtered = filterEdges(edges);
 
-console.log(filtered.length);
-
-
-
-  //console.log(GatsbyDef);
   return (
     <Layout>
       <SEO title={'Linux Tips , tricks Tutorials '} article={false} />
       <Jumbotron className="text-center top-head">
 
-        
+
         <Container>
           <h1>
-            Hi , Welcome to <span class="badge badge-success"> TheLinuxTerminal </span> 
+            Hi , Welcome to <span class="badge badge-success"> TheLinuxTerminal </span>
           </h1>
-<p style={{color:'rgb(184, 194, 180)'}}>We are <span class="badge badge-alert" >Linux</span> Enthusiasts who shares Programming With Linux to the Community ❤️  !!</p>
-        <a href="/category/linux" style={{ margin:'1px'}} className="badge badge-warning">#linux </a>
-        <a href="/category/nginx" style={{ margin:'1px'}} className="badge badge-warning"> #nginx</a>
-        <a href="/category/centos7" style={{ margin:'1px'}} className="badge badge-warning"> #centos7</a>
+          <p style={{ color: 'rgb(184, 194, 180)' }}>We are <span class="badge badge-alert" >Linux</span> Enthusiasts who shares Programming With Linux to the Community ❤️  !!</p>
+          <a href="/category/linux" style={{ margin: '1px' }} className="badge badge-warning">#linux </a>
+          <a href="/category/nginx" style={{ margin: '1px' }} className="badge badge-warning"> #nginx</a>
+          <a href="/category/centos7" style={{ margin: '1px' }} className="badge badge-warning"> #centos7</a>
 
-        
 
-        <div className="social-buttons">
-                  <a href={`https://www.facebook.com/sharer/sharer.php?u=https://thelinuxterminal.com`} className="facebook"></a>
-                  <a href={`https://twitter.com/share?url=https://thelinuxterminal.com`}  className="twitter  "></a>
-                  <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://thelinuxterminal.com`} className="linkedin  "></a>
-                 
-                  <a href={`https://www.reddit.com/submit?url=https://thelinuxterminal.com`} className="reddit  "></a>
-                </div>
 
-<a className="btn btn-secondary" href="/write-for-us" >Write For Us</a>
+          <div className="social-buttons">
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=https://thelinuxterminal.com`} className="facebook"></a>
+            <a href={`https://twitter.com/share?url=https://thelinuxterminal.com`} className="twitter  "></a>
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://thelinuxterminal.com`} className="linkedin  "></a>
+
+            <a href={`https://www.reddit.com/submit?url=https://thelinuxterminal.com`} className="reddit  "></a>
+          </div>
+
+          <a className="btn btn-secondary" href="/write-for-us" >Write For Us</a>
         </Container>
 
       </Jumbotron>
 
       <div className="album py-5 bg-light text-center ">
-      <h3> #latest-posts </h3>
+        <h3> #latest-posts </h3>
         <Container >
-        
+
           <Row>
-            {filtered.map((data,key) => {
+            {filtered.map((data, key) => {
               return (
                 <Col key={key} md={4} >
                   {card(data.node.frontmatter.title, data.node.frontmatter.cover != null ? data.node.frontmatter.cover.childImageSharp.fluid.src : GatsbyDef, data)}

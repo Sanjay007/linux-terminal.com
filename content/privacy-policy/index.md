@@ -8,6 +8,7 @@ tags: []
 metadescription: "Privacy Policy Document Of thelinuxterminal.com "
 cover: "images/mail-alert.png"
 author: tom
+article: false
 ---
 ## Privacy Policy for theLinuxTerminal
 At theLinuxTerminal.com, accessible from https://thelinuxterminal.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by theLinuxTerminal.com and how we use it.

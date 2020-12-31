@@ -41,7 +41,7 @@ class BlogTemplate extends React.Component {
     //console.log(this.props, image);
 
     return <Layout>
-      <SEO title={title} publishedOn={frontmatter.data}  description={frontmatter.metadescription} image={image} article={true}></SEO>
+      <SEO title={title} publishedOn={frontmatter.data}  description={frontmatter.metadescription} image={image} article={frontmatter.article}></SEO>
      
       <Container fluid>
 

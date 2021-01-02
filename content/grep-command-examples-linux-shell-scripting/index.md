@@ -22,4 +22,42 @@ In this article we will understand and learn few examples which we use in our sh
 A **CentOS/RHEL 7**  production server or a Linux VPS . 
 
 ## Installing Grep in Linux/Unix
-In most of the cases grep is pre installed in most of the linux distros.
+In most of the cases grep is pre installed in most of the linux distros. But it is possible in some of the linux distros grep might not be present .
+ Have a look how we can install grep .
+ #### Installing grep in Ubuntu Distros
+ ```bash
+ sudo apt-get install grep
+ ```
+
+ In RedHat linux Distros yu can install by simply 
+ ```bash
+ yum install grep
+ ```
+ You can now verify the grep installation by simply typing 
+ ```bash
+ grep ---version
+```
+## Common Grep Command Examples in Linux 
+The grep command is the one of the most commonly used  Unix utility for text based searching in files or any other types . It accepts regular expressions, and can produce output in various formats.  
+
+Lets have a look athe various options available in grep command  using examples.
+
+### How to Search for Lines with a specific pattern
+
+```bash
+$ grep pattern filename
+```
+Lets say i want to find a text name as ```John``` in my text file
+
+```bash
+grep "John" terminal.txt
+```
+This would list down all the lines with the word "John" in my text fle.You can also search in multiple files using the same patttern above 
+
+```bash
+grep "John" file1.txt file2.xt file3.txt 
+```
+
+
+### 
+

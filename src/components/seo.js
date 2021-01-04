@@ -97,88 +97,29 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
 
   return (
     <Helmet>
- <Helmet
-    htmlAttributes={{
-      lang: "en"
-    }}
-
-
-    
-    title={title===undefined?site.siteMetadata.title:title}
-    meta={
-      [{name:"dmca-site-verification",
-    content:"V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01"},
-	{name:"google-site-verification",
-    content:"ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY"},
-	{name:"og:locale",content:"en_US"},
-	{name:"og:url",content:site.siteMetadata.siteUrl},
-	{name:"og:site_name",content:"theLinuxTerminal"},
-	  {name:"og:title",content:title!=''?title:site.siteMetadata.title},
-	    {name:"og:description",content:metaDescription!=''?metaDescription:site.siteMetadata.description},
-  {itemprop:"name",content:title!=''?title:site.siteMetadata.title},
-  {itemprop:"description",content:metaDescription!=''?metaDescription:site.siteMetadata.description},
-        {
-          name: "description",
-          content:metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description
-        },
-        {
-          name: "keywords",
-          content: site.siteMetadata.keywords
-        },
-        {
-          property: "og:title",
-          content: title===undefined?site.siteMetadata.title:title
-        },
-        {
-          property: "og:description",
-            content:metaDescription!=''?metaDescription:site.siteMetadata.description
-        },
-        {
-          name: "twitter:creator",
-          content: site.siteMetadata.author
-        },
-        {
-          name: "twitter:title",
-          content: title===undefined?site.siteMetadata.title:title
-        },
-        {
-          name: "twitter:description",
-          content:metaDescription!=''?metaDescription:site.siteMetadata.description
-        }
-      ]
-        .concat(
-          metaImage
-            ? [
-                {
-                  property: "og:image",
-                  content: image
-                },
-                {
-                  property: "og:image:width",
-                  content: metaImage.width
-                },
-                {
-                  property: "og:image:height",
-                  content: metaImage.height
-                },
-                {
-                  name: "twitter:card",
-                  content: "summary_large_image"
-                }
-              ]
-            : [
-                {
-                  name: "twitter:card",
-                  content: "summary"
-                }
-              ]
-        )
-        .concat(meta)
-    }
-  />
-<script type="application/ld+json">
+      <meta charset="UTF-8"></meta>
+      <meta lang="en-US" />
+      <meta name="robots" content="index, follow" />
+      <meta name="dmca-site-verification" content="V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01" />
+      <meta name="google-site-verification" content="ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY" />
+      <meta name="description" content={metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description} />
+      <meta name="keywords" content={site.siteMetadata.keywords} />
+      <meta name="og:locale" content="" />
+      <meta name="og:url" content={site.siteMetadata.siteUrl} />
+      <meta name="og:site_name" content="thelinuxTerminal" />
+      <meta name="og:title" content={title!=''?title:site.siteMetadata.title} />
+      <meta name="og:description" content={metaDescription!=''?metaDescription:site.siteMetadata.description} />
+      <meta name="og:image" content={image} />
+      <meta name="twitter.title"  content={title!=''?title:site.siteMetadata.title} />
+      <meta name="twitter.description"  content={metaDescription!=''?metaDescription:site.siteMetadata.description} />
+      <meta name="twitter:creator" content="thelinuxt" />
+      <meta itemprop="name" content={title!=''?title:site.siteMetadata.title} />
+      <meta itemprop="description" content={metaDescription!=''?metaDescription:site.siteMetadata.description} />
+     
+      <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSONLD)}
         </script>
+
     </Helmet>
    
   

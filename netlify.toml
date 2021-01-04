@@ -1,46 +1,4 @@
 [[redirects]]
-  from = "/how-to-network-pxe-install-kali-linux/"
-  to = "/category/linux"
-  status = 301
-  force = true
-  query = {path = ":path"}
-  
-[[redirects]]
-  from = "/bash-manual-gnu-bourne-again-shell/"
-  to = "/category/shell-scripting"
-  status = 301
-  force = true
-  query = {path = ":path"}
-  
-[[redirects]]
-  from = "/non-interactive-editing-with-sed-bash-programming/"
-  to = "/category/shell-scripting"
-  status = 301
-  force = true
-  query = {path = ":path"}
-  
-[[redirects]]
-  from = "/more-advanced-if-usage-bash-programming/"
-  to = "/category/shell-scripting"
-  status = 301
-  force = false
-  query = {path = ":path"}
-    
-[[redirects]]
-  from = "/introduction-to-gawk-bash-programming/"
-  to = "/category/shell-scripting"
-  status = 301
-  force = true
-  query = {path = ":path"}
-
-[[redirects]]
-  from = "/how-to-network-pxe-install-kali-linux/"
-  to = "/category/shell-scripting"
-  status = 301
-  force = true
-  query = {path = ":path"}
-  
-[[redirects]]
   from = "https://thelinuxterminal.com/*"
   to = "https://www.thelinuxterminal.com/:splat"
   status = 301

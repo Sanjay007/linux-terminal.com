@@ -119,7 +119,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
   {itemprop:"description",content:metaDescription!=''?metaDescription:site.siteMetadata.description},
         {
           name: "description",
-          content:metaDescription!=''?metaDescription:site.siteMetadata.description
+          content:metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description
         },
         {
           name: "keywords",

@@ -100,6 +100,7 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
       <meta charset="UTF-8"></meta>
       <meta lang="en-US" />
       <meta name="robots" content="index, follow" />
+      <title>{title===undefined?site.siteMetadata.title:title}</title>
       <meta name="dmca-site-verification" content="V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01" />
       <meta name="google-site-verification" content="ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY" />
       <meta name="description" content={metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description} />

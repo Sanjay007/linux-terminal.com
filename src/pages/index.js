@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO  article={false} />
+      <SEO description={'Learn Linux and advanced tips and tricks from system admin and devops users .'} article={false} />
       <Jumbotron className="text-center top-head">
 
 

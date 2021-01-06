@@ -6,7 +6,7 @@
 
 [[redirects]]
   from = "http://thelinuxterminal.com/*"
-  to = "http://thelinuxterminal.com/:splat"
+  to = "https://thelinuxterminal.com/:splat"
   status = 301
   force = true
 

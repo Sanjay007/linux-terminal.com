@@ -2,7 +2,7 @@
 title: "Grep Command Examples in Unix/Linux Shell Scripting"
 date: "2020-12-12"
 category: "shell-scripting"
-path: "/grep-coomand-examples-in-linux-shell-scripting"
+path: "/grep-coomand-examples-in-linux-shell-scripting/"
 published: true
 tags: [linux,shell-scripting]
 metadescription: "Grep commands are widely used in text based operations linux shell scripting .Lets learn Grep Command Exmples in Unix/Linux Shell Scripting"

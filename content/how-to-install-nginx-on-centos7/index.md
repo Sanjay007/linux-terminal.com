@@ -2,7 +2,7 @@
 title: "How to Install Nginx On Centos7 "
 date: "2020-12-12"
 category: "centos"
-path: "/how-to-install-nginx-on-centos7"
+path: "/how-to-install-nginx-on-centos7/"
 published: true
 tags: [centos7,nginx]
 metadescription: "We will understand How can we send email alert when memory is too low in your linux systems.RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage."

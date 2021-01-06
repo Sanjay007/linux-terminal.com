@@ -2,7 +2,7 @@
 title: "10 Netstat Command Examples in Linux"
 date: "2020-12-12"
 category: "linux"
-path: "/unix-linux-10-netstat-command-examples"
+path: "/unix-linux-10-netstat-command-examples/"
 published: true
 tags: [netstat,linux]
 metadescription: "We will understand Netstat command with few examples command for checking and monitoring network configurations"

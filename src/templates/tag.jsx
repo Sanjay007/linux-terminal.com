@@ -40,7 +40,7 @@ const uniqueposts = Array.from(new Set(posts.map(a => a.frontmatter.path)))
     });
 
         return <Layout>
-<SEO title={`Learn ${tagName}` } />
+<SEO title={`Learn ${tagName}`}  path={`/category/${tagName}`} />
         
 
         <div class="album py-5 bg-light text-center ">

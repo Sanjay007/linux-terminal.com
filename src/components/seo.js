@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang,  meta, image: metaImage, title ,article:article,author,publishedOn}) {
+function SEO({ description, lang,  path:metaPath, image: metaImage, title ,article:article,author,publishedOn}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -88,6 +88,8 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
   }
 //console.log(site);
   const metaDescription = description;
+  console.log('path',metaPath);
+
   //console.log('metad',title,metaDescription);
   const image =
   metaImage && metaImage.src
@@ -101,6 +103,8 @@ function SEO({ description, lang,  meta, image: metaImage, title ,article:articl
       <meta lang="en-US" />
       <meta name="robots" content="index, follow" />
       <title>{title===undefined?site.siteMetadata.title:title}</title>
+      <link rel="canonical" href={`${site.siteMetadata.siteUrl}${metaPath!=undefined?metaPath:''}`}/>
+
       <meta name="dmca-site-verification" content="V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01" />
       <meta name="google-site-verification" content="ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY" />
       <meta name="description" content={metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description} />

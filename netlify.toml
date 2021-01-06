@@ -1,8 +1,3 @@
-[[redirects]]
-  from = "https://www.thelinuxterminal.com/*"
-  to = "https://thelinuxterminal.com/:splat"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "http://thelinuxterminal.com/*"

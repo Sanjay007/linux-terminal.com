@@ -1,17 +1,17 @@
 [[redirects]]
-  from = "https://thelinuxterminal.com/*"
-  to = "https://www.thelinuxterminal.com/:splat"
+  from = "https://www.thelinuxterminal.com/*"
+  to = "https://thelinuxterminal.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://thelinuxterminal.com/*"
-  to = "http://www.thelinuxterminal.com/:splat"
+  to = "http://thelinuxterminal.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://www.thelinuxterminal.com/*"
-  to = "https://www.thelinuxterminal.com/:splat"
+  to = "https://thelinuxterminal.com/:splat"
   status = 301
   force = true

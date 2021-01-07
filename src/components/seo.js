@@ -101,6 +101,7 @@ function SEO({ description, lang,  path:metaPath, image: metaImage, title ,artic
     <Helmet>
       <meta charset="UTF-8"></meta>
       <meta lang="en-US" />
+    <meta name="msvalidate.01" content="62316D528D17570F658E6792301DA432" />
       <meta name="robots" content="index, follow" />
       <title>{title===undefined?site.siteMetadata.title:title}</title>
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${metaPath!=undefined?metaPath:''}`}/>

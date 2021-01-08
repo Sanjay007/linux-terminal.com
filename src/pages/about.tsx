@@ -6,7 +6,9 @@ import SEO from "../components/seo"
 
 const About = (props: PageProps) => (
   <Layout>
-    <SEO title="theLinuxTerminal" />
+    <SEO title={"theLinuxTerminal"}  description={"About Linuxterminal"} article={false} />
+
+
     <div className="article-wrapper">
 
 <article>
@@ -41,8 +43,8 @@ Only Stuff we are good at it is Linux and Admin
 
 <br></br>
 
-We 👏  Means and My Friend , We have been Working on Frugalis for last 3 Years .
-During this Journey We have learnt a lot and We came up with an idea to Start a blog to share Frugalis tutorials and Tricks . <div className="">
+We 👏  Means and My Friend , We have been Working on linux and system admin  for last 3 Years .
+During this Journey We have learnt a lot and We came up with an idea to Start a blog to share Linux  tutorials , tips and  tricks . <div className="">
 <br></br>
 <h2>How to Reach Us !!</h2> 
 

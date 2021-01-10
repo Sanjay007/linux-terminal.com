@@ -107,7 +107,6 @@ function SEO({ description, lang,  path:metaPath, image: metaImage, title ,artic
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${metaPath!=undefined?metaPath:''}`}/>
 
       <meta name="dmca-site-verification" content="V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01" />
-      <meta name="google-site-verification" content="ySmaF8_E9BKO7N9XQERCj7aE9LeRpMmUbmmfjzx8onY" />
       <meta name="description" content={metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description} />
       <meta name="keywords" content={site.siteMetadata.keywords} />
       <meta name="og:locale" content="" />

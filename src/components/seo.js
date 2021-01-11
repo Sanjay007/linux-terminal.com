@@ -100,12 +100,13 @@ function SEO({ description, lang,  path:metaPath, image: metaImage, title ,artic
   return (
     <Helmet>
       <meta charset="UTF-8"></meta>
+<meta http-equiv='content-language' content='en-US' />
       <meta lang="en-US" />
     <meta name="msvalidate.01" content="62316D528D17570F658E6792301DA432" />
     <meta name="google-site-verification" content="ZekwwRGV5v0GzeMeBvLF-PMi0Y4by8iODJSuvdr3nYM" />
       <meta name="robots" content="index, follow" />
       <title>{title===undefined?site.siteMetadata.title:title}</title>
-      <link rel="canonical" href={`${site.siteMetadata.siteUrl}${metaPath!=undefined?metaPath:''}`}/>
+      <link rel="canonical" href={`${site.siteMetadata.siteUrl}${metaPath!=undefined?metaPath:''}`} />
 
       <meta name="dmca-site-verification" content="V3hxSmdCbitRbFY2TVFWVHowWVlxSjUxUmIzbGVWMjhZY0F0VlozMGxmcz01" />
       <meta name="description" content={metaDescription!='' || metaDescription!=undefined ?metaDescription:site.siteMetadata.description} />

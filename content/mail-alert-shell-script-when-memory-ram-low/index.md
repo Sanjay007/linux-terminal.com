@@ -1,6 +1,6 @@
 ---
 title: "Write Shell Script to Send Email Alert when too low Server memory "
-date: "2020-12-12"
+date: "2020-12-30"
 category: "linux"
 path: "/mail-alert-shell-script-when-memory-ram-low/"
 published: true

@@ -1,6 +1,6 @@
 ---
 title: "Best 15 Linux Tips and Tricks for Developers  "
-date: "2020-12-12"
+date: "2021-01-12"
 category: "unix"
 path: "/15-unix-tricks/"
 published: true

@@ -1,6 +1,6 @@
 ---
 title: "How to Install Nginx On Centos7 "
-date: "2020-12-12"
+date: "2020-12-15"
 category: "centos"
 path: "/how-to-install-nginx-on-centos7/"
 published: true

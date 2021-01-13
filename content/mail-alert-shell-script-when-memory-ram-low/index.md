@@ -1,11 +1,11 @@
 ---
-title: "Write Shell Script to Send Email Alert when too low Server memory "
-date: "2020-12-30"
+title: "How to Monitor Server memory Using Shell Script"
+date: "2021-01-13"
 category: "linux"
-path: "/mail-alert-shell-script-when-memory-ram-low/"
+path: "/monitor-linux-memory-shell-script/"
 published: true
 tags: [shell-scripting,centos7,linux]
-metadescription: "We will understand How can we send email alert when memory is too low in your linux systems.RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage."
+metadescription: "We will understand How can we monitor  memory  too low in your linux systems.RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage."
 cover: "images/mail-alert.png"
 author: tom
 article: true
@@ -13,7 +13,7 @@ article: true
 
 ## Introduction
 
-Almost all linux admin knows about bash and bash scripting is one of the most demand skills for any linux admin . So today we will understand How can we send email alert when memory is too low in your linux systems .
+Almost all linux admin knows about bash and bash scripting is one of the most demand skills for any linux admin . So today we will understand onitor Server memory Using Shell Script in your linux systems .
 
 RAM is considered as one of the most important part of any system , especially when a system runs in production and you need to consistently monitor your RAM usage . 
 

@@ -22,3 +22,39 @@
   to = "https://thelinuxterminal.com/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/bash-programming-how-to-write-while-loops/"
+  to = "https://thelinuxterminal.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/linux-basics/"
+  to = "https://thelinuxterminal.com/http://www.thelinuxterminal.com/introduction-to-sed-streameditor-bash-programming/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/introduction-to-sed-streameditor-bash-programming/"
+  to = "https://thelinuxterminal.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/introduction-to-if-bash-programming/"
+  to = "https://thelinuxterminal.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/how-to-install-backtrack-to-usb-with-unetbootin/"
+  to = "https://thelinuxterminal.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/web-download/backtrack-5-r3-64bit-iso/"
+  to = "https://thelinuxterminal.com"
+  status = 301
+  force = true

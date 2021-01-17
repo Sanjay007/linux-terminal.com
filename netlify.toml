@@ -6,7 +6,19 @@
   force = true
 
 [[redirects]]
+  from = "https://thelinuxterminal.com/category/www-rss-news/"
+  to = "https://thelinuxterminal.com"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "http://www.thelinuxterminal.com/*"
   to = "https://thelinuxterminal.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://thelinuxterminal.com/understanding-the-osi-reference-model/"
+  to = "https://thelinuxterminal.com/"
   status = 301
   force = true
